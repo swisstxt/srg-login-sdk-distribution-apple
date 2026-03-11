@@ -221,6 +221,6 @@ All releases and changelogs are on the [Releases page](https://github.com/swisst
 
 ## Questions
 
-Slack: **#srg-mobile-sdk**
+Teams: [SRG-Login SDK](https://teams.microsoft.com/l/channel/19%3A77f7201d0aa44ccfb8f2e856c47c7cae%40thread.skype/SRG-Login%20SDK?groupId=4c35f1b2-811c-40ef-aa8e-01eede3277f2&tenantId=2598639a-d083-492d-bdbe-f1dd8066b03a)
 
 For SDK developers and contributors, see the [main repository](https://github.com/swisstxt/srg-login-mobile-sdk).
