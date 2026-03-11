@@ -80,6 +80,22 @@ SrgLoginSdk.shared.initialize(
 
 Use `environment` to select the OIDC endpoints: `.dev`, `.int`, or `.prod`.
 
+#### AppIdentity
+
+> **`appId`, `appName`, and `appVersion` must be resolved dynamically at runtime — never hardcode these values.**
+
+`businessUnit` and `businessUnitName` must use exact values from the table below. These values are used as Sentry filters to categorize and route error reports — incorrect or custom values will break Sentry dashboards and alerting.
+
+| `businessUnit` | `businessUnitName` |
+| --- | --- |
+| `"SRF"` | `"Schweizer Radio und Fernsehen"` |
+| `"RTS"` | `"Radio Télévision Suisse"` |
+| `"RSI"` | `"Radiotelevisione svizzera di lingua italiana"` |
+| `"RTR"` | `"Radiotelevisiun Svizra Rumantscha"` |
+| `"SWI"` | `"SWI swissinfo.ch"` |
+| `"SWISSTXT"` | `"SWISS TXT"` |
+| `"SRG"` | `"SRG SSR"` |
+
 ```swift
 import SRGLoginCore
 
@@ -87,11 +103,11 @@ let config = SrgLoginConfig(
     clientId: "your-oauth-client-id",
     redirectUri: "your-app-scheme://loginSuccess",
     appIdentity: AppIdentity(
-        appId: Bundle.main.bundleIdentifier ?? "com.example.yourapp",
-        appName: "Your App Name",
-        appVersion: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0",
-        businessUnit: "SRG",
-        businessUnitName: "SRG SSR"
+        appId: Bundle.main.bundleIdentifier ?? "",
+        appName: Bundle.main.infoDictionary?["CFBundleName"] as? String ?? "",
+        appVersion: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "",
+        businessUnit: "SRF",
+        businessUnitName: "Schweizer Radio und Fernsehen"
     ),
     postLogoutRedirectUri: "your-app-scheme://logoutSuccess",
     environment: .prod
