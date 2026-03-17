@@ -1,5 +1,7 @@
 # SRG Login SDK — Swift Package Manager
 
+![Latest Version](https://img.shields.io/github/v/tag/swisstxt/srg-login-sdk-spm?label=latest&color=blue)
+
 ## Integration
 
 ### Xcode
