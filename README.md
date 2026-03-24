@@ -1,6 +1,6 @@
 # SRG Login SDK — Apple Distribution
 
-![Latest Version](https://img.shields.io/github/v/tag/swisstxt/srg-login-sdk-distribution-apple?label=latest&color=blue)
+![SDK Version](https://img.shields.io/github/v/tag/swisstxt/srg-login-sdk-distribution-apple?label=SDK%20Version&color=blue)
 
 ## Integration
 
@@ -158,7 +158,7 @@ let tokenStateFlow = SkieSwiftStateFlow<TokenState>(srgLogin.observeTokenState()
 
 for await state in tokenStateFlow {
     guard !Task.isCancelled else { break }
-    // state is one of: Valid, ExpiringSoon, Refreshed, Expired, NoToken, Error
+    // state is one of: Valid, ExpiringSoon, Refreshing, Refreshed, Expired, RefreshFailed, NoTokens
     print("Token state: \(state)")
 }
 ```
