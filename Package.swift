@@ -24,8 +24,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SRGLoginCore",
-            url: "https://github.com/swisstxt/srg-login-sdk-spm/releases/download/v1.0.0-beta.10/SRGLoginCore.xcframework.zip",
-            checksum: "b31132a32a8d453a38a3d75e8af29c08749657c587c51deaf72b8990d6b20a78"
+            url: "https://github.com/swisstxt/srg-login-sdk-distribution-apple/releases/download/v1.0.0-beta.11/SRGLoginCore.xcframework.zip",
+            checksum: "071b80b3151d2f4a2118159dc609a29d52c400c1ece9583e5791e15486f43442"
         )
     ]
 )
